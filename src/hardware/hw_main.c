@@ -12,6 +12,7 @@
 /// \brief hardware renderer, using the standard HardWareRender driver DLL for SRB2
 
 #include <math.h>
+#include <stdint.h>
 
 #include "../doomstat.h"
 
