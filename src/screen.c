@@ -10,6 +10,8 @@
 /// \file  screen.c
 /// \brief Handles multiple resolutions, 8bpp/16bpp(highcolor) modes
 
+#include "stdint.h"
+
 #include "doomdef.h"
 #include "doomstat.h"
 #include "screen.h"
@@ -28,7 +30,6 @@
 #include "d_main.h"
 #include "d_clisrv.h"
 #include "f_finale.h"
-
 
 #if defined (USEASM) && !defined (NORUSEASM)//&& (!defined (_MSC_VER) || (_MSC_VER <= 1200))
 #define RUSEASM //MSC.NET can't patch itself
