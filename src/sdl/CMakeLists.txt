@@ -146,6 +146,13 @@ if(${SDL2_FOUND})
 	add_executable(SRB2SDL2 MACOSX_BUNDLE WIN32 ${SRB2_SDL2_TOTAL_SOURCES})
 	set_target_properties(SRB2SDL2 PROPERTIES OUTPUT_NAME ${SRB2_SDL2_EXE_NAME})
 
+	# We want C11
+	set_target_properties(SRB2SDL2 PROPERTIES
+		C_STANDARD 11
+		C_STANDARD_REQUIRED ON
+		C_EXTENSIONS OFF
+	)
+
 	if(${CMAKE_SYSTEM} MATCHES Darwin)
 		find_library(CORE_LIB CoreFoundation)
 		target_link_libraries(SRB2SDL2 PRIVATE
