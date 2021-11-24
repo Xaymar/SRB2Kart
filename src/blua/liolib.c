@@ -198,7 +198,7 @@ static int io_open (lua_State *L) {
 
     forward = strchr(splitter, '/');
     backward = strchr(splitter, '\\');
-	while ((splitter = (forward && backward) ? min(forward, backward) : (forward ?: backward)))
+	while ((splitter = (forward && backward) ? min(forward, backward) : (forward ? forward : backward)))
 	{
 		*splitter = 0;
 		I_mkdir(destFilename, 0755);
