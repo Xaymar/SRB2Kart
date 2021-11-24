@@ -469,8 +469,10 @@ void I_PlayCD(UINT8 nTrack, UINT8 bLooping)
 	cdLooping = bLooping;
 
 	//faB: stop MIDI music, MIDI music will restart if volume is upped later
-	cv_digmusicvolume.value = 0;
-	cv_midimusicvolume.value = 0;
+        cv_digmusicvolume.value = 0;
+#ifndef NO_MIDI
+        cv_midimusicvolume.value = 0;
+#endif
 	I_StopSong();
 
 	//faB: I don't use the notify message, I'm trying to minimize the delay
