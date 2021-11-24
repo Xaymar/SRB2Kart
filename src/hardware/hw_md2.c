@@ -31,6 +31,7 @@
 #include "../d_main.h"
 #include "../r_bsp.h"
 #include "../r_main.h"
+#include "../m_fixed.h"
 #include "../m_misc.h"
 #include "../w_wad.h"
 #include "../z_zone.h"
